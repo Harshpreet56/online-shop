@@ -3,8 +3,12 @@ import { IoMdMail } from "react-icons/io";
 import { FaLocationDot } from "react-icons/fa6";
 import { FaFacebookF } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
+import { useLocation } from "react-router-dom";
+
 function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
+  // const location = useLocation();
+  // const ShopPage = location.pathname === "/Shop";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,9 +25,13 @@ function Navbar() {
 
   return (
     <>
+      {/* <header
+  className={`fixed top-0 w-full z-50 transition-all duration-300
+    ${ShopPage ? "bg-black text-white" : "bg-black text-white"}
+  `}
+> */}
       <header>
-        <div className="headerbar ">
-
+        <div>
           <div className="flex justify-between bg-blue-900 p-4 text-white text-lg">
             <div className="space-x-4 flex items-center">
               <IoMdMail />
@@ -41,40 +49,40 @@ function Navbar() {
           <div
             className={`w-full transition-all duration-300 ${
               isScrolled
-                ? "fixed top-0 left-0 bg-blue-900 shadow-lg z-50"
-                : "absolute bg-transparent"
-            }`}
+                ? "fixed top-0 left-0 bg-blue-900 z-50"
+                : "absolute bg-black-500 text-black "
+            }
+            `}
           >
-            <nav className="flex justify-between items-center px-6 py-4 text-xl ">
- 
+            <nav className="flex justify-between items-center px-6 py-4 text-xl z-">
               <div>
                 <img className="h-10" src="Images/logo1.webp" alt="logo" />
               </div>
 
-              <div className="space-x-6 font-medium text-white">
-                <a href="#" className="hover:text-blue-600 transition">
+              <div className="space-x-6 font-medium text-white ">
+                <a href="/" className="hover:text-blue-600 transition">
                   Home
                 </a>
-                <a href="#" className="hover:text-blue-600 transition">
+                <a href="/About" className="hover:text-blue-600 transition">
                   About Us
                 </a>
-                <a href="#" className="hover:text-blue-600 transition">
+                <a href="/Service" className="hover:text-blue-600 transition">
                   Service
                 </a>
-                <a href="#" className="hover:text-blue-600 transition">
+                <a href="/Protfoli" className="hover:text-blue-600 transition">
                   Portfolio
                 </a>
-                <a href="#" className="hover:text-blue-600 transition">
+                <a href="/Shop" className="hover:text-blue-600 transition">
                   Shop
                 </a>
-                <a href="#" className="hover:text-blue-600 transition">
+                <a href="/blog" className="hover:text-blue-600 transition">
                   Blog
                 </a>
               </div>
             </nav>
           </div>
 
-          {isScrolled && <div className="h-20"></div>}
+          {isScrolled && <div className="h-2"></div>}
         </div>
       </header>
     </>

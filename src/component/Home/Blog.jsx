@@ -1,7 +1,7 @@
 import React from "react";
 import { FaUserCircle, FaComments } from "react-icons/fa";
 
-function BlogSection() {
+function Blog() {
   return (
     <section className="bg-[#f4f6fb] py-20">
       <div className="text-center mb-9">
@@ -10,9 +10,9 @@ function BlogSection() {
       </div>
 
       <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-10">
-        {/* Card 1 */}
+       
         <div className="relative">
-          {/* Image */}
+         
           <div className="relative">
             <img
               src="/Images/blog.webp"
@@ -20,13 +20,13 @@ function BlogSection() {
               className="w-full h-64 object-cover"
             />
 
-            {/* Date Badge */}
+          
             <div className="absolute bottom-10 right-4 bg-yellow-400 text-black px-4 py-2 text-sm font-semibold">
               SEP 16
             </div>
           </div>
 
-          {/* Content Box */}
+     
           <div className="bg-white shadow-md px-8 py-10 relative -mt-12 mx-6">
             <h3 className="text-2xl font-bold text-blue-900 leading-snug">
               Made two Companies <br /> Stronger than Ever
@@ -53,7 +53,7 @@ function BlogSection() {
           </div>
         </div>
 
-        {/* Card 2 */}
+        
         <div className="relative">
           <div className="relative">
             <img
@@ -92,7 +92,6 @@ function BlogSection() {
           </div>
         </div>
 
-        {/* Card 3 */}
         <div className="relative">
           <div className="relative">
             <img
@@ -135,4 +134,4 @@ function BlogSection() {
   );
 }
 
-export default BlogSection;
+export default Blog;

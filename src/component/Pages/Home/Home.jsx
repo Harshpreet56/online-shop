@@ -4,9 +4,9 @@ import About from "../../../component/Home/About";
 import Service from "../../../component/Home/Service";
 import NewCase from "../../Home/NewCase";
 import WhyChoose from "../../Home/WhyChoose"
-import Footer from "../../Layout/Footer";
 import Customer from "../../Home/Customer"
-import News from "../../Home/News"
+import News from "../../Home/Blog"
+
 
 
 function Home() {
@@ -19,8 +19,8 @@ function Home() {
       <NewCase />
       <Customer />
       <News />
-      <Footer />
      
+
     </>
   );
 }

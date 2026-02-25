@@ -4,14 +4,10 @@ function About() {
   return (
     <>
       <section className="flex ml-14 gap-9 ">
-        <div className="pic">
+        <div className="pic relative">
           <img className=" h-160 w-2xl" src="Images/ourcounst.webp" alt="" />
-          <div className="pic2">
-            <img
-              className="absolute -left-2.5 top-343"
-              src="Images/ourcounst1.webp"
-              alt=""
-            />
+          <div className="pic2 absolute top-97 -left-13.25">
+            <img src="Images/ourcounst1.webp" alt="" />
           </div>
         </div>
         <div className="ourcompany">

@@ -1,7 +1,7 @@
 import React from "react";
 import { FaStar } from "react-icons/fa";
 
-function Testimonials() {
+function Customers() {
   return (
     <section className="bg-[#f4f6fb] py-20">
       <div className="text-center mb-9">
@@ -44,7 +44,7 @@ function Testimonials() {
           </div>
         </div>
 
-        {/* Card 2 */}
+
         <div className="bg-white p-10 rounded-lg shadow-sm hover:shadow-lg transition duration-300">
           <div className="flex gap-1 text-yellow-400 mb-6">
             <FaStar />
@@ -77,7 +77,7 @@ function Testimonials() {
           </div>
         </div>
 
-        {/* Card 3 */}
+       
         <div className="bg-white p-10 rounded-lg shadow-sm hover:shadow-lg transition duration-300">
           <div className="flex gap-1 text-yellow-400 mb-6">
             <FaStar />
@@ -114,4 +114,4 @@ function Testimonials() {
   );
 }
 
-export default Testimonials;
+export default Customers;

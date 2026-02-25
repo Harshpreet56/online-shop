@@ -3,11 +3,10 @@ import React from "react";
 function Hero() {
   return (
     <>
-      
-      <section className="bg-[url('/Images/homebg.webp')]  h-screen bg-cover bg-center flex items-center  ">
-        <div className="home  text-2xl text-white  ml-5">
+      <section className="bg-[url('/Images/homebg.webp')]  h-150 bg-cover bg-center flex items-center  ">
+        <div className="home  text-2xl text-white  ">
           <h4>Helping businesses since 1987</h4>
-          <h2 className="text-8xl ">
+          <h2 className="text-5xl ">
             Reach the <br />
             Limits with <br />
             Consulting Agency

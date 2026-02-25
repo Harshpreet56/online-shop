@@ -13,7 +13,7 @@ function WhyChoose() {
             />
           </div>
           <div className="choose p-4">
-            <p className='text-2xl mt-4'>Why Choose Us</p>
+            <p className='text-2xl mt-6'>Why Choose Us</p>
             <h2 className="text-blue-900 text-[50px] font-bold leading-normal ">
               The Largest Business Experts
             </h2>
