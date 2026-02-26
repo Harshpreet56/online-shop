@@ -3,12 +3,12 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 import Navbar from "./component/Layout/Navbar";
 import Home from "./component/Pages/Home/Home";
-import Shop from "./component/Pages/About/shop";
+import Shop from "./component/Pages/Shop/Shop";
 import About from "./component/Pages/About/About";
 import Service from "./component/Home/Service";
-import Protfoli from "./component/Pages/About/Protfoli"
+import Protfoli from "./component/Pages/Protfoli/Protfoli"
 import Footer from "./component/Layout/Footer";
-import Blog from "./component/Pages/About/blog"
+import Blog from "./component/Pages/Blog/Blog"
 
 
 function App() {

@@ -4,13 +4,13 @@ function Hero() {
   return (
     <>
       <section className="bg-[url('/Images/homebg.webp')]  h-150 bg-cover bg-center flex items-center  ">
-        <div className="home  text-2xl text-white  ">
+        <div className="home  text-2xl text-white ml-5 ">
           <h4>Helping businesses since 1987</h4>
-          <h2 className="text-5xl ">
+          <h1  className="text-[60px] ">
             Reach the <br />
             Limits with <br />
             Consulting Agency
-          </h2>
+          </h1>
           <div className="button text-lg gap-7 mt-5 ">
             <button className="border-black  m-1 p-5 bg-blue-950 text-white">
               CASE STUDIES

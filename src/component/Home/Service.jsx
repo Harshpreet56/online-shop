@@ -1,131 +1,84 @@
 import React from "react";
 
 function Service() {
+  const services = [
+    {
+      id: 1,
+      title: "Consumer Products",
+      img: "Images/counstal.webp",
+      digit: "01",
+    },
+    {
+      id: 2,
+      title: "Audit Marketing",
+      img: "Images/counstal.webp",
+      digit: "02",
+    },
+    {
+      id: 3,
+      title: "Financial Consulting",
+      img: "Images/counstal.webp",
+      digit: "03",
+    },
+    {
+      id: 4,
+      title: "Business Strategy",
+      img: "Images/counstal.webp",
+      digit: "04",
+    },
+  ];
+
   return (
-    <>
-      <section className="py-20 bg-gray-100 ">
-        <div className="mt-16 mb-14 text-center">
-          <p className="text-gray-500 text-xl ">Our Services List</p>
-          <h1 className="font-bold text-3xl text-blue-900">
-            What We’re Offering
-          </h1>
-        </div>
-        <div className=" mx-auto  gap-8 px-6 flex justify-evenly ">
+    <section className="py-24 bg-gray-100">
+      {/* Section Heading */}
+      <div className="text-center mb-16">
+        <p className="text-gray-500 text-lg uppercase tracking-widest">
+          Our Services List
+        </p>
+        <h2 className="text-4xl font-bold text-blue-900 mt-2">
+          What We’re Offering
+        </h2>
+      </div>
+
+      {/* Cards Grid */}
+      <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 lg:grid-cols-4 gap-10 ">
+        {services.map((item) => (
           <div
-            className=" w-75 group relative p-10 bg-white border border-gray-200 
-                       hover:bg-yellow-400 hover:border-black
+            key={item.id}
+            className="group relative bg-white p-8 rounded-xl border border-gray-200 
                        transition-all duration-300 ease-in-out 
-                       hover:-translate-y-2 hover:shadow-xl cursor-pointer"
+                       hover:bg-yellow-400 hover:-translate-y-3 hover:shadow-2xl h-65"
           >
-            <h3
-              className="text-2xl font-semibold text-blue-900 
-                           group-hover:text-black transition-colors duration-300"
-            >
-              {" "}
-              Consumer <br />
-              Products{" "}
-            </h3>
-            <div
-              className="mt-16 text-5xl text-black 
-                            group-hover:text-black transition-colors duration-300"
-            >
-              {" "}
-              <img className="h-24" src="Images/counstal.webp" alt="" />
-            </div>
-            <span
-              className="absolute bottom-6 right-6 text-6xl font-bold 
-                             text-gray-200 group-hover:text-blue-900 
-                             transition-colors duration-300"
-            >
-              1
-            </span>
-          </div>
-          <div
-            className="w-75 group relative p-10 bg-white border border-gray-200 
-                       hover:bg-yellow-400 hover:border-black
-                       transition-all duration-300 ease-in-out 
-                       hover:-translate-y-2 hover:shadow-xl cursor-pointer"
-          >
+            {/* Service Title */}
             <h3
               className="text-xl font-semibold text-blue-900 
-                           group-hover:text-black transition-colors duration-300"
+                         transition-colors duration-300 
+                         group-hover:text-black"
             >
-              {" "}
-              Audit <br /> Marketing
+              {item.title}
             </h3>
-            <div
-              className="mt-16 text-5xl text-black 
-                            group-hover:text-black transition-colors duration-300"
-            >
-              {" "}
-              <img className="h-24" src="Images/counstal.webp" alt="" />
+
+            <div className="flex items-center">
+              <div className="mt-17 flex justify-center">
+                <img
+                  className="h-20 object-contain transition-transform duration-300 group-hover:scale-110"
+                  src={item.img}
+                  alt={item.title}
+                />
+              </div>
+
+              <span
+                className="absolute bottom-6 right-6 text-6xl font-extrabold 
+                         text-gray-100 transition-all duration-300
+                         group-hover:text-blue-900 group-hover:scale-110"
+              >
+                {item.digit}
+              </span>
             </div>
-            <span
-              className="absolute bottom-6 right-6 text-6xl font-bold 
-                             text-gray-200 group-hover:text-blue-900 
-                             transition-colors duration-300"
-            >
-              2
-            </span>
           </div>
-          <div
-            className=" w-75 group relative p-10 bg-white border border-gray-200 
-                       hover:bg-yellow-400 hover:border-black
-                       transition-all duration-300 ease-in-out 
-                       hover:-translate-y-2 hover:shadow-xl cursor-pointer"
-          >
-            <h3
-              className="text-xl font-semibold text-blue-900 
-                           group-hover:text-black transition-colors duration-300"
-            >
-              Advice <br /> Banking
-            </h3>
-            <div
-              className="mt-16 text-5xl text-black 
-                            group-hover:text-black transition-colors duration-300"
-            >
-              {" "}
-              <img className="h-24" src="Images/counstal.webp" alt="" />
-            </div>
-            <span
-              className="absolute bottom-6 right-6 text-6xl font-bold 
-                             text-gray-200 group-hover:text-blue-900 
-                             transition-colors duration-300"
-            >
-              3
-            </span>
-          </div>
-          <div
-            className=" w-75 group relative p-10 bg-white border border-gray-200 
-                       hover:bg-yellow-400 hover:border-black
-                       transition-all duration-300 ease-in-out 
-                       hover:-translate-y-2 hover:shadow-xl cursor-pointer"
-          >
-            <h3
-              className="text-xl font-semibold text-blue-900 
-                           group-hover:text-black transition-colors duration-300"
-            >
-              {" "}
-              Marketing <br /> Rule
-            </h3>
-            <div
-              className="mt-16 text-5xl text-black 
-                            group-hover:text-black transition-colors duration-300"
-            >
-              {" "}
-              <img className="h-24" src="Images/counstal.webp" alt="" />
-            </div>
-            <span
-              className="absolute bottom-6 right-6 text-6xl font-bold 
-                             text-gray-200 group-hover:text-blue-900 
-                             transition-colors duration-300"
-            >
-              4
-            </span>
-          </div>
-        </div>
-      </section>
-    </>
+        ))}
+      </div>
+    </section>
   );
 }
 

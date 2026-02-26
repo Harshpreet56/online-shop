@@ -11,13 +11,13 @@ function About() {
           </div>
         </div>
         <div className="ourcompany">
-          <p className="text-grey text-[21px]  ">Our Company Introduction </p>
+          <p className="text-gray-500 text-[21px]  ">Our Company Introduction </p>
           <h2 className="text-6xl leading-[1.2]  text-blue-950 mb-2  font-medium">
             We Ensure Only <br /> Quality Consulting <br /> Services for our
             Clients
           </h2>
-          <p className="text-[21px] leading-[1.6] text-gray-500">
-            Quis aliqua sunt nisi consectetur anim ullamco ea deserunt non{" "}
+          <p className="text-[21px] leading-loose text-gray-500">
+            Quis aliqua sunt nisi consectetur anim ullamco ea deserunt non
             <br />
             voluptate nisi sit elit exercitation eu lorem. Mollit occaecat nisi
             <br />
