@@ -1,7 +1,7 @@
   // import React, { useEffect, useState } from "react";
 
   import { useContext } from "react";
-  import ProductContext from "../../../context/ProductContext";
+ import { ProductContext } from "../../context/ProductProvider";
 
   function Shop() {
     // const [products, setProducts] = useState([]);

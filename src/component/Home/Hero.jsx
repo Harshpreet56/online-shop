@@ -3,8 +3,8 @@ import React from "react";
 function Hero() {
   return (
     <>
-      <section className="bg-[url('/Images/homebg.webp')]  h-150 bg-cover bg-center flex items-center  ">
-        <div className="home  text-2xl text-white ml-5 ">
+      <section className="bg-[url('/Images/homebg.webp')]  h-160 bg-cover bg-center flex items-center   ">
+        <div className="home  text-2xl text-white ml-5 mt-8">
           <h4>Helping businesses since 1987</h4>
           <h1  className="text-[60px] ">
             Reach the <br />

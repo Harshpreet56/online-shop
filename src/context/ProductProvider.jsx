@@ -1,36 +1,32 @@
-import React, { useEffect, useState } from 'react'
-import ProductContext from "./ProductContext";
+import React, { createContext, useEffect, useState } from "react";
 
-function ProductProvider({ children }) {
+export const ProductContext = createContext();
 
-    const [products, setProducts] = useState([]);
+export const ProductProvider=({ children }) => {
+  const [products, setProducts] = useState([]);
 
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const ProductAlldata = await fetch(" https://dummyjson.com/products");
 
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const ProductAlldata = await fetch(" https://dummyjson.com/products");
+        const ProductData = await ProductAlldata.json();
 
-                const ProductData = await ProductAlldata.json();
+        setProducts(ProductData.products);
+      } catch (error) {
+        console.log("error fecthing api");
+      }
+    };
 
-                setProducts(ProductData.products);
-            } catch (error) {
-                console.log("error fecthing api")
-            }
-        }
-
-        fetchData()
-    }, []);
-    return (
-      
-      <>
-         <ProductContext.Provider
-      value={{ products}}
-    >
-      {children}
-    </ProductContext.Provider>  
+    fetchData();
+  }, []);
+  return (
+    <>
+      <ProductContext.Provider value={{ products }}>
+        {children}
+      </ProductContext.Provider>
     </>
-  )
+  );
 }
 
-export default ProductProvider
+export default ProductProvider;

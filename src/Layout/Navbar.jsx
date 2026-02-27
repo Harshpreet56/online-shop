@@ -47,7 +47,7 @@ function Navbar() {
             : "relative bg-black"}
         `}
       >
-        <nav className="flex justify-between items-center px-6 py-4 text-xl max-w-7xl mx-auto">
+        <nav className="flex justify-between items-center px-6 py-4 text-xl max-w-8xl mx-auto ">
           <img className="h-10" src="/Images/logo1.webp" alt="logo" />
 
           <div className="space-x-6 font-medium text-white">
@@ -57,6 +57,7 @@ function Navbar() {
             <Link to="/Protfolio" className="hover:text-yellow-400">Portfolio</Link>
             <Link to="/Shop" className="hover:text-yellow-400">Shop</Link>
             <Link to="/Blog" className="hover:text-yellow-400">Blog</Link>
+            <Link to="/Cart" className="hover:text-yellow-400">Cart</Link>
           </div>
         </nav>
       </div>

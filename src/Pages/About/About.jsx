@@ -1,5 +1,5 @@
 import React from "react";
-import About from "../../Home/About";
+import About from "../../component/Home/About";
 const AboutPage = () => {
   return (
     <>
