@@ -30,7 +30,7 @@ function Service() {
 
   return (
     <section className="py-24 bg-gray-100">
-      {/* Section Heading */}
+   
       <div className="text-center mb-16">
         <p className="text-gray-500 text-lg uppercase tracking-widest">
           Our Services List
@@ -40,7 +40,7 @@ function Service() {
         </h2>
       </div>
 
-      {/* Cards Grid */}
+
       <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 lg:grid-cols-4 gap-10 ">
         {services.map((item) => (
           <div
@@ -49,7 +49,7 @@ function Service() {
                        transition-all duration-300 ease-in-out 
                        hover:bg-yellow-400 hover:-translate-y-3 hover:shadow-2xl h-65"
           >
-            {/* Service Title */}
+           
             <h3
               className="text-xl font-semibold text-blue-900 
                          transition-colors duration-300 
@@ -69,7 +69,7 @@ function Service() {
 
               <span
                 className="absolute bottom-6 right-6 text-6xl font-extrabold 
-                         text-gray-100 transition-all duration-300
+                         text-gray-400 transition-all duration-300
                          group-hover:text-blue-900 group-hover:scale-110"
               >
                 {item.digit}

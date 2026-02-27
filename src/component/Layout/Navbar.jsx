@@ -43,7 +43,7 @@ function Navbar() {
           ${isScrolled
             ? "fixed top-0 bg-blue-900 shadow-lg"
             : isHome
-            ? "absolute top-[72px] bg-transparent"
+            ? "absolute top-18 bg-transparent"
             : "relative bg-black"}
         `}
       >
@@ -54,7 +54,7 @@ function Navbar() {
             <Link to="/" className="hover:text-yellow-400">Home</Link>
             <Link to="/About" className="hover:text-yellow-400">About</Link>
             <Link to="/Service" className="hover:text-yellow-400">Service</Link>
-            <Link to="/Portfolio" className="hover:text-yellow-400">Portfolio</Link>
+            <Link to="/Protfolio" className="hover:text-yellow-400">Portfolio</Link>
             <Link to="/Shop" className="hover:text-yellow-400">Shop</Link>
             <Link to="/Blog" className="hover:text-yellow-400">Blog</Link>
           </div>

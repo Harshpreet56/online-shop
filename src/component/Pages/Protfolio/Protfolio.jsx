@@ -1,17 +1,16 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from 'react'
 
-function Protfoli() {
-      const [products, setProducts] = useState([]);
-    
-      useEffect(() => {
-        fetch("https://dummyjson.com/products")
-          .then((res) => res.json())
-          .then((data) => setProducts(data.products));
-      }, []);
-    
+function Protfolio() {
+    const [products, setProducts] = useState([]);
+        
+          useEffect(() => {
+            fetch("https://dummyjson.com/products")
+              .then((res) => res.json())
+              .then((data) => setProducts(data.products));
+          }, []);
   return (
-    <>
-      <section className="bg-[url('/Images/homebg.webp')] h-[70vh] bg-cover bg-top flex items-center justify-center">
+      <>
+            <section className="bg-[url('/Images/homebg.webp')] h-[70vh] bg-cover bg-top flex items-center justify-center">
         <div className="text-center text-white font-bold text-6xl">
           <h1>Portfolio</h1>
         </div>
@@ -53,7 +52,7 @@ function Protfoli() {
       </div>
       </section>
     </>
-  );
+  )
 }
 
-export default Protfoli;
+export default Protfolio

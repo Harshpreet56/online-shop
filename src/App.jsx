@@ -6,7 +6,7 @@ import Home from "./component/Pages/Home/Home";
 import Shop from "./component/Pages/Shop/Shop";
 import About from "./component/Pages/About/About";
 import Service from "./component/Home/Service";
-import Protfoli from "./component/Pages/Protfoli/Protfoli"
+import Protfolio from "./component/Pages/Protfolio/Protfolio"
 import Footer from "./component/Layout/Footer";
 import Blog from "./component/Pages/Blog/Blog"
 
@@ -15,14 +15,16 @@ function App() {
   return (
     <>
     
-          <BrowserRouter>
+      <BrowserRouter>
+      
+        
                   <Navbar />
                   <Routes>
                     <Route path="/" element={ <Home />} />
                     <Route path="/About" element={<About />} />
                     <Route path="/Service" element={<Service />} />
                     <Route path="/Shop" element={<Shop />} />
-                    <Route path="/Protfoli" element={<Protfoli />} />
+                    <Route path="/Protfolio" element={<Protfolio />} />
                     <Route path="/Blog" element={<Blog />} />
                     
         </Routes>
