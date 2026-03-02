@@ -3,12 +3,13 @@ import { IoMdMail } from "react-icons/io";
 import { FaLocationDot } from "react-icons/fa6";
 import { FaFacebookF, FaInstagram } from "react-icons/fa";
 import { useLocation, Link } from "react-router-dom";
+import Logout from "../Auth/Logout";
 
 function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
 
-  const isHome = location.pathname === "/";
+  const isHome = location.pathname === "/Home";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,7 +22,6 @@ function Navbar() {
 
   return (
     <>
-      {/* Top Bar */}
       <div className="flex justify-between bg-blue-900 p-4 text-white text-lg">
         <div className="space-x-4 flex items-center">
           <IoMdMail />
@@ -39,25 +39,46 @@ function Navbar() {
 
       {/* Main Navbar */}
       <div
-        className={`w-full transition-all duration-300 z-50
-          ${isScrolled
-            ? "fixed top-0 bg-blue-900 shadow-lg"
-            : isHome
-            ? "absolute top-18 bg-transparent"
-            : "relative bg-black"}
+        className={`w-full transition-all duration-300 z-9999
+          ${
+            isScrolled
+              ? "fixed top-0 bg-blue-900 shadow-lg"
+              : isHome
+                ? "absolute top-18 bg-transparent"
+                : "relative bg-black"
+          }
         `}
       >
-        <nav className="flex justify-between items-center px-6 py-4 text-xl max-w-8xl mx-auto ">
+        <nav className="flex justify-between items-center px-9 py-4 text-xl max-w-8xl mx-auto ">
           <img className="h-10" src="/Images/logo1.webp" alt="logo" />
 
           <div className="space-x-6 font-medium text-white">
-            <Link to="/" className="hover:text-yellow-400">Home</Link>
-            <Link to="/About" className="hover:text-yellow-400">About</Link>
-            <Link to="/Service" className="hover:text-yellow-400">Service</Link>
-            <Link to="/Protfolio" className="hover:text-yellow-400">Portfolio</Link>
-            <Link to="/Shop" className="hover:text-yellow-400">Shop</Link>
-            <Link to="/Blog" className="hover:text-yellow-400">Blog</Link>
-            <Link to="/Cart" className="hover:text-yellow-400">Cart</Link>
+            <Link to="/" className="hover:text-yellow-400">
+              Home
+            </Link>
+            <Link to="/About" className="hover:text-yellow-400">
+              About
+            </Link>
+            <Link to="/Service" className="hover:text-yellow-400">
+              Service
+            </Link>
+            <Link to="/Protfolio" className="hover:text-yellow-400">
+              Portfolio
+            </Link>
+            <Link to="/Shop" className="hover:text-yellow-400">
+              Shop
+            </Link>
+            <Link to="/Blog" className="hover:text-yellow-400">
+              Blog
+            </Link>
+            <Link to="/Cart" className="hover:text-yellow-400">
+              Cart
+            </Link>
+          </div>
+          <div className="font-medium text-white">
+            <Link to="/login" className="hover:text-yellow-400">
+              <Logout />
+            </Link>
           </div>
         </nav>
       </div>
