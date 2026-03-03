@@ -26,8 +26,8 @@ function Shop() {
               className="max-w-sm rounded-xl overflow-hidden shadow-lg bg-white mt-14"
             >
               <img
-                className="w-full h-48 object-cover"
-                src={item.thumbnail}
+                className="w-full h-68 "
+                src={item.images}
                 alt={item.title}
               />
 
