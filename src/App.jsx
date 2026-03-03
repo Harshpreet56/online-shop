@@ -13,12 +13,12 @@ import Blog from "./Pages/Blog/Blog";
 import Login from "./Auth/Login";
 import Register from "./Auth/Register";
 import Logout from "./Auth/Logout";
+import ForgetPassword from "./Auth/Forget";
 
 function AppLayout() {
   const location = useLocation();
 
-  // Hide Navbar & Footer on login & register
-  const hideLayoutRoutes = ["/login", "/register"];
+  const hideLayoutRoutes = ["/login", "/register", "/forgetpassword"];
   const isAuthPage = hideLayoutRoutes.includes(location.pathname.toLowerCase());
 
   return (
@@ -29,6 +29,7 @@ function AppLayout() {
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
         <Route path="/logout" element={<Logout />} />
+        <Route path="/forgetpassword" element={<ForgetPassword />} />
 
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />

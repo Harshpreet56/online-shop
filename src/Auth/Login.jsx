@@ -14,37 +14,34 @@ function Login() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-
-   const validateForm = () => {
-    let newError = {};     
+  const validateForm = () => {
+    let newError = {};
 
     if (!formData.email) {
       newError.email = "Enter you Email";
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-      newError.email = "Email invalid "
+      newError.email = "Email invalid ";
     }
     if (!formData.password) {
       newError.password = "Enter you password";
     } else if (formData.password.length < 6) {
-      newError.password = "password invalid "
+      newError.password = "password invalid ";
     }
-     
-    return newError
-    
-  };
 
+    return newError;
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-     const validate = validateForm();  
+    const validate = validateForm();
     setError(validate);
 
     if (Object.keys(validate).length !== 0) {
-      return;  
+      return;
     }
 
-    const storedUser = JSON.parse(localStorage.getItem("users")) ;
+    const storedUser = JSON.parse(localStorage.getItem("users"));
 
     const validUser = storedUser.find(
       (user) =>
@@ -58,16 +55,15 @@ function Login() {
     //   alert("Invalid Email or Password");
     // }
     if (validUser) {
-  alert("Login Successful!");
+      alert("Login Successful!");
 
-  // SAVE LOGIN STATE
-  localStorage.setItem("isLoggedIn", "true");
-  localStorage.setItem("currentUser", JSON.stringify(validUser));
+      localStorage.setItem("isLoggedIn", "true");
+      localStorage.setItem("currentUser", JSON.stringify(validUser));
 
-  navigate("/");
-} else {
-  alert("Invalid Email or Password");
-}
+      navigate("/");
+    } else {
+      alert("Invalid Email or Password");
+    }
   };
 
   return (
@@ -82,9 +78,10 @@ function Login() {
             placeholder="Email"
             onChange={handleChange}
             className="w-full border p-3 rounded-lg"
-       
           />
-          {error.email && <p className="text-blue-500 font-bold text-lg">{error.email} </p>}
+          {error.email && (
+            <p className="text-blue-500 font-bold text-lg">{error.email} </p>
+          )}
 
           <input
             type="password"
@@ -92,10 +89,16 @@ function Login() {
             placeholder="Password"
             onChange={handleChange}
             className="w-full border p-3 rounded-lg"
-         
           />
-          {error.password && <p className="text-red-500 font-bold text-lg">{error.password} </p>}
+          {error.password && (
+            <p className="text-red-500 font-bold text-lg">{error.password} </p>
+          )}
 
+          <p className="text-right text-sm">
+            <Link to="/ForgetPassword" className="text-blue-600">
+              Forgot Password?
+            </Link>
+          </p>
           <button className="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700">
             Login
           </button>
