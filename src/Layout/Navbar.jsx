@@ -51,12 +51,12 @@ function Navbar() {
 
   
       <div
-        className={`w-full transition-all duration-300 z-40
+        className={`w-full transition-all duration-300 z-9999
         ${
           isScrolled
             ? "fixed top-0 bg-blue-900 shadow-lg"
             : isHome
-            ? "absolute top-18 bg-transparent"
+            ? "absolute top-auto bg-transparent"
             : "relative bg-black"
         }`}
       >

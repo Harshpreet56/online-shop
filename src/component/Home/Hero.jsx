@@ -4,7 +4,7 @@ function Hero() {
   return (
     <>
       {/* Hero Section */}
-      <section className="bg-[url('/Images/homebg.webp')] min-h-screen bg-cover bg-center flex items-center">
+      <section className="bg-[url('/Images/homebg.webp')]  h-166 bg-cover bg-center flex items-center w-auto">
         <div className="max-w-8xl  px-6 py-20 text-white">
           
           <h4 className="text-base sm:text-lg md:text-xl mb-4">
