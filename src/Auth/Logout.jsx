@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import { LuLogOut } from "react-icons/lu";
 
 function Logout() {
   const navigate = useNavigate();
@@ -21,7 +22,7 @@ function Logout() {
       <button
         onClick={handleLogout}
            >
-        Logout
+        <LuLogOut />
       </button>
     </div>
   );

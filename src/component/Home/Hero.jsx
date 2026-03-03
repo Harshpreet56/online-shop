@@ -3,30 +3,52 @@ import React from "react";
 function Hero() {
   return (
     <>
-      <section className="bg-[url('/Images/homebg.webp')]  h-160 bg-cover bg-center flex items-center   ">
-        <div className="home  text-2xl text-white ml-5 mt-8">
-          <h4>Helping businesses since 1987</h4>
-          <h1  className="text-[60px] ">
+      {/* Hero Section */}
+      <section className="bg-[url('/Images/homebg.webp')] min-h-screen bg-cover bg-center flex items-center">
+        <div className="max-w-8xl  px-6 py-20 text-white">
+          
+          <h4 className="text-base sm:text-lg md:text-xl mb-4">
+            Helping businesses since 1987
+          </h4>
+
+          <h1 className="font-bold leading-tight 
+                         text-3xl 
+                         sm:text-4xl 
+                         md:text-5xl 
+                         lg:text-6xl">
             Reach the <br />
             Limits with <br />
             Consulting Agency
           </h1>
-          <div className="button text-lg gap-7 mt-5 ">
-            <button className="border-black  m-1 p-5 bg-blue-950 text-white">
+
+          <div className="flex flex-col sm:flex-row gap-4 mt-8">
+            <button className="px-6 py-3 bg-blue-950 hover:bg-blue-900 transition text-white font-medium">
               CASE STUDIES
             </button>
-            <button className="border-black  m-1 p-5 bg-yellow-500 text-white">
+
+            <button className="px-6 py-3 bg-yellow-500 hover:bg-yellow-600 transition text-white font-medium">
               CONTACT NOW
             </button>
           </div>
+
         </div>
       </section>
+
+      {/* Bottom Banner */}
       <section>
-        <div className="linoor flex justify-between bg-yellow-500 p-8 text-2xl font-medium items-center ">
-          <h4>Linoor Finance & Consultation HTML Template</h4>
-          <button className=" bg-blue-950 text-white m-1 p-4 ">
-            purchase now
+        <div className="flex flex-col md:flex-row justify-between items-center 
+                        bg-yellow-500 
+                        px-6 py-6 md:px-12 
+                        text-lg md:text-xl font-medium gap-4">
+          
+          <h4 className="text-center md:text-left">
+            Linoor Finance & Consultation HTML Template
+          </h4>
+
+          <button className="bg-blue-950 hover:bg-blue-900 transition text-white px-6 py-3">
+            Purchase Now
           </button>
+
         </div>
       </section>
     </>
