@@ -40,7 +40,6 @@ function ForgetPassword() {
       return;
     }
 
-    // Update password
     users[userIndex].password = newPassword;
 
     localStorage.setItem("users", JSON.stringify(users));

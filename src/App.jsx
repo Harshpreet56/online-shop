@@ -8,7 +8,7 @@ import Home from "./Pages/Home/Home";
 import Shop from "./Pages/Shop/Shop";
 import About from "./Pages/About/About";
 import Service from "./component/Home/Service";
-import Protfolio from "./Pages/Protfolio/Protfolio";
+import Protfolio from "./Portfolio/Home/Home";
 import Footer from "./Layout/Footer";
 import Blog from "./Pages/Blog/Blog";
 import Login from "./Auth/Login";

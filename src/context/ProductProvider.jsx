@@ -1,14 +1,14 @@
 import React, { createContext, useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+
 
 export const ProductContext = createContext();
 
 export const ProductProvider = ({ children }) => {
   const [products, setProducts] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const [cart, setCart] = useState([]);   // ✅ Cart State
+  const [cart, setCart] = useState([]);
 
-  const itemsPerPage = 9;
+  const itemsPerPage = 8;
 
   useEffect(() => {
     const fetchData = async () => {
@@ -23,7 +23,6 @@ export const ProductProvider = ({ children }) => {
     fetchData();
   }, []);
 
- 
   const addToCart = (product) => {
     const exist = cart.find((item) => item.id === product.id);
 
@@ -32,8 +31,8 @@ export const ProductProvider = ({ children }) => {
         cart.map((item) =>
           item.id === product.id
             ? { ...item, quantity: item.quantity + 1 }
-            : item
-        )
+            : item,
+        ),
       );
     } else {
       setCart([...cart, { ...product, quantity: 1 }]);
@@ -41,30 +40,26 @@ export const ProductProvider = ({ children }) => {
   };
 
   const removeFromCart = (id) => {
-  setCart(cart.filter((item) => item.id !== id));
-};
+    setCart(cart.filter((item) => item.id !== id));
+  };
 
-const increaseQuantity = (id) => {
-  setCart(
-    cart.map((item) =>
-      item.id === id
-        ? { ...item, quantity: item.quantity + 1 }
-        : item
-    )
-  );
-};
+  const increaseQuantity = (id) => {
+    setCart(
+      cart.map((item) =>
+        item.id === id ? { ...item, quantity: item.quantity + 1 } : item,
+      ),
+    );
+  };
 
-const decreaseQuantity = (id) => {
-  setCart(
-    cart
-      .map((item) =>
-        item.id === id
-          ? { ...item, quantity: item.quantity - 1 }
-          : item
-      )
-      .filter((item) => item.quantity > 0)
-  );
-};
+  const decreaseQuantity = (id) => {
+    setCart(
+      cart
+        .map((item) =>
+          item.id === id ? { ...item, quantity: item.quantity - 1 } : item,
+        )
+        .filter((item) => item.quantity > 0),
+    );
+  };
 
   const lastIndex = currentPage * itemsPerPage;
   const firstIndex = lastIndex - itemsPerPage;
@@ -73,7 +68,7 @@ const decreaseQuantity = (id) => {
   const totalPages = Math.ceil(products.length / itemsPerPage);
   const pageNumbers = Array.from(
     { length: totalPages },
-    (_, index) => index + 1
+    (_, index) => index + 1,
   );
 
   return (
@@ -85,10 +80,10 @@ const decreaseQuantity = (id) => {
         setCurrentPage,
         pageNumbers,
         cart,
-        addToCart, 
+        addToCart,
         removeFromCart,
-    increaseQuantity,
-    decreaseQuantity,
+        increaseQuantity,
+        decreaseQuantity,
       }}
     >
       {children}

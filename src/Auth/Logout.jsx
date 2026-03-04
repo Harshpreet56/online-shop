@@ -3,12 +3,10 @@ import { LuLogOut } from "react-icons/lu";
 
 function Logout() {
   const navigate = useNavigate();
-
   const handleLogout = () => {
     const confirmLogout = window.confirm(
       "Are you sure you want to logout?"
     );
-
     if (confirmLogout) {
       localStorage.removeItem("isLoggedIn");
       localStorage.removeItem("currentUser");
@@ -16,7 +14,6 @@ function Logout() {
       navigate("/Login");
     }
   };
-
   return (
     <div>
       <button

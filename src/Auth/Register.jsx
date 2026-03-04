@@ -45,14 +45,11 @@ function Register() {
 
     if (Object.keys(validate).length !== 0) return;
 
-    // ✅ FIX: Default empty array if no users
     const existingUsers = JSON.parse(localStorage.getItem("users")) || [];
 
-    // Check if email already exists
     const userExists = existingUsers.find(
       (user) => user.email === formData.email
     );
-
     if (userExists) {
       alert("Email already registered");
       return;
