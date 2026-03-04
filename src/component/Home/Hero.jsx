@@ -3,7 +3,7 @@ import React from "react";
 function Hero() {
   return (
     <>
-      {/* Hero Section */}
+    
       <section className="bg-[url('/Images/homebg.webp')]  h-166 bg-cover bg-center flex items-center w-auto">
         <div className="max-w-8xl  px-6 py-20 text-white">
           
@@ -34,7 +34,6 @@ function Hero() {
         </div>
       </section>
 
-      {/* Bottom Banner */}
       <section>
         <div className="flex flex-col md:flex-row justify-between items-center 
                         bg-yellow-500 
