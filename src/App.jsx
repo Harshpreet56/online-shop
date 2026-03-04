@@ -1,4 +1,5 @@
 import React from "react";
+import { ProductProvider } from "./context/ProductProvider";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import "./App.css";
 
@@ -14,6 +15,8 @@ import Login from "./Auth/Login";
 import Register from "./Auth/Register";
 import Logout from "./Auth/Logout";
 import ForgetPassword from "./Auth/Forget";
+import ProductDetails from "./Cart/Product";
+import Cart from "./Cart/Cart";
 
 function AppLayout() {
   const location = useLocation();
@@ -37,6 +40,8 @@ function AppLayout() {
         <Route path="/shop" element={<Shop />} />
         <Route path="/protfolio" element={<Protfolio />} />
         <Route path="/blog" element={<Blog />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/product/:id" element={<ProductDetails />} />
       </Routes>
 
       {!isAuthPage && <Footer />}
@@ -46,9 +51,11 @@ function AppLayout() {
 
 function App() {
   return (
-    <BrowserRouter>
-      <AppLayout />
-    </BrowserRouter>
+    <ProductProvider>
+      <BrowserRouter>
+        <AppLayout />
+      </BrowserRouter>
+    </ProductProvider>
   );
 }
 

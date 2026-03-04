@@ -71,12 +71,12 @@ function Navbar() {
 
           <div className="hidden lg:flex gap-6 text-lg font-medium">
             <Link to="/" className="hover:text-yellow-400">Home</Link>
-            <Link to="/About" className="hover:text-yellow-400">About</Link>
-            <Link to="/Service" className="hover:text-yellow-400">Service</Link>
-            <Link to="/Protfolio" className="hover:text-yellow-400">Portfolio</Link>
-            <Link to="/Shop" className="hover:text-yellow-400">Shop</Link>
-            <Link to="/Blog" className="hover:text-yellow-400">Blog</Link>
-            <Link to="/Cart" className="hover:text-yellow-400">Cart</Link>
+            <Link to="/about" className="hover:text-yellow-400">About</Link>
+            <Link to="/service" className="hover:text-yellow-400">Service</Link>
+            <Link to="/protfolio" className="hover:text-yellow-400">Portfolio</Link>
+            <Link to="/shop" className="hover:text-yellow-400">Shop</Link>
+            <Link to="/blog" className="hover:text-yellow-400">Blog</Link>
+            <Link to="/cart" className="hover:text-yellow-400">Cart</Link>
             <Link to="/login" className="hover:text-yellow-400">
               <Logout />
             </Link>
