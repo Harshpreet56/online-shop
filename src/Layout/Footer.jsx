@@ -26,28 +26,28 @@ function Footer() {
           </h3>
           <ul className="space-y-2">
             <li>
-              <a href="#" className="hover:text-blue-400 transition">
+              <a href="/" className="hover:text-blue-400 transition">
                 Home
               </a>
             </li>
             <li>
-              <a href="#" className="hover:text-blue-400 transition">
+              <a href="/about" className="hover:text-blue-400 transition">
                 About
               </a>
             </li>
             <li>
-              <a href="#" className="hover:text-blue-400 transition">
+              <a href="/service" className="hover:text-blue-400 transition">
                 Services
               </a>
             </li>
             <li>
-              <a href="#" className="hover:text-blue-400 transition">
+              <a href="/blog" className="hover:text-blue-400 transition">
                 Blog
               </a>
             </li>
             <li>
-              <a href="#" className="hover:text-blue-400 transition">
-                Contact
+              <a href="/protfolio" className="hover:text-blue-400 transition">
+               Protfolio
               </a>
             </li>
           </ul>
@@ -63,10 +63,10 @@ function Footer() {
               <span className="text-white font-medium">Phone:</span> +91 9876543210
             </p>
             <p>
-              <span className="text-white font-medium">Email:</span> info@yourcompany.com
+              <span className="text-white font-medium">Email:</span> Dhanoaharshpreet701@gmail.com
             </p>
             <p>
-              <span className="text-white font-medium">Location:</span> 123 Business Street, Mumbai, India
+              <span className="text-white font-medium">Location:</span> 112 Street, Punjab , India
             </p>
           </div>
         </div>

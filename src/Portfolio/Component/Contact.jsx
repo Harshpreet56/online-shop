@@ -56,6 +56,7 @@ function Contact() {
           <form
             onSubmit={handleSubmit}
             className="bg-white p-8 rounded-xl shadow-md space-y-6"
+           
           >
             <div>
               <input

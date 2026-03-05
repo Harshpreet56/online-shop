@@ -32,7 +32,7 @@ function About() {
             voluptate nisi sit elit exercitation eu lorem. Mollit occaecat nisi
             occaecat fugiat ullamco.
           </p>
-          <div className="flex flex-col sm:flex-row gap-6 mt-8">
+          <div className="flex sm:flex-row gap-6 mt-8">
             <div className="flex items-center gap-3">
               <img className="h-14" src="Images/counstal.webp" alt="" />
               <p className="text-blue-700 font-bold text-lg">

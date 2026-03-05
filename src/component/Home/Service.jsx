@@ -30,7 +30,6 @@ function Service() {
 
   return (
     <section className="py-24 bg-gray-100">
-   
       <div className="text-center mb-16">
         <p className="text-gray-500 text-lg uppercase tracking-widest">
           Our Services List
@@ -40,16 +39,22 @@ function Service() {
         </h2>
       </div>
 
-
       <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 lg:grid-cols-4 gap-10 ">
         {services.map((item) => (
+          // <div
+          //   key={item.id}
+          //   className="group relative bg-white p-8 rounded-xl border border-gray-200
+          //              transition-all duration-300 ease-in-out
+          //              hover:bg-yellow-400 hover:-translate-y-3 hover:shadow-2xl h-65"
+          // >
           <div
             key={item.id}
             className="group relative bg-white p-8 rounded-xl border border-gray-200 
-                       transition-all duration-300 ease-in-out 
-                       hover:bg-yellow-400 hover:-translate-y-3 hover:shadow-2xl h-65"
+             transition-all duration-300 ease-in-out 
+             hover:bg-yellow-400 active:bg-yellow-400
+             hover:-translate-y-3 active:-translate-y-2
+             hover:shadow-2xl active:shadow-xl h-65"
           >
-           
             <h3
               className="text-xl font-semibold text-blue-900 
                          transition-colors duration-300 

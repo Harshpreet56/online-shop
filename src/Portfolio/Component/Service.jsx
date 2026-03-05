@@ -31,7 +31,7 @@ function Services() {
       <div className="max-w-7xl mx-auto px-6">
         
         <h2 className="text-3xl font-bold text-center mb-4">
-          what do i help
+          What do i help
         </h2>
 
         <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">

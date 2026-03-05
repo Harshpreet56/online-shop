@@ -6,7 +6,7 @@ import ProductProvider from './context/ProductProvider.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <ProductProvider >
+    <ProductProvider  value={{}}>
     <App />
     </ProductProvider>
   </StrictMode>,
